@@ -1,1 +1,34 @@
-<h1>hello world</h1>
+<head>
+    <title>hello</title>
+    <meta name="viewport" content="width=device-width，initial-scale=1.0,minimum-scale=0.5,maximum-scale=2.0,user-scalable=yes">
+</head>
+<body>
+<script>
+    function cl() {
+        var url=document.getElementById("url");
+        url.value="";
+
+    }
+    function getUrl() {
+        var url=document.getElementById("url");
+        var video =document.getElementById("video");
+        video.src="http://jiexi.071811.cc/jx2.php?url="+url.value;
+
+    }
+</script>
+<p style="text-align: center">
+    <input  id="url" type="text" style="width: 380px;height: 80px;font-size:28px;padding: 0px 0px" value="请输入观看的视频网址" onclick="cl()"/>
+    <input type="button" style="width:100px;height: 80px;font-size:28px;padding: 0px 0px" value="前往" onclick="getUrl()"/>
+    <br/>
+</p>
+<p style="text-align: center">
+    <iframe id="video"
+            style="z-index:1;"
+            width="932" height="524"
+            frameborder="0" allow="accelerometer; autoplay;
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen">
+
+    </iframe>
+</p>
+</body>
+</html>
